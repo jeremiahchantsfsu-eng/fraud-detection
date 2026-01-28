@@ -1,3 +1,12 @@
+
+
+
+
+<img width="1001" height="790" alt="Screenshot 2026-01-27 at 11 30 51 PM" src="https://github.com/user-attachments/assets/47fffeac-1107-4a8c-be06-1a6ed1301d7c" />
+
+
+
+
 # 📊 Fraud Detection & Transaction Risk Dashboard
 
 This dashboard analyzes financial transaction data to uncover fraud patterns, behavioral anomalies, and financial risk exposure. The goal of this project is to identify how fraudulent activity impacts revenue and to understand when, how, and where suspicious transactions occur.
