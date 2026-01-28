@@ -1,119 +1,135 @@
 
+<img width="1458" height="870" alt="Screenshot 2026-01-28 at 12 26 34 AM" src="https://github.com/user-attachments/assets/a108a013-8797-469a-be9c-5c8aa74c840b" />
 
 
 
-<img width="1001" height="790" alt="Screenshot 2026-01-27 at 11 30 51 PM" src="https://github.com/user-attachments/assets/47fffeac-1107-4a8c-be06-1a6ed1301d7c" />
 
 
 
 
-# 📊 Fraud Detection & Transaction Risk Dashboard
+# 💳 Fraud Risk & Financial Loss Analysis Dashboard
 
-This dashboard analyzes financial transaction data to uncover fraud patterns, behavioral anomalies, and financial risk exposure. The goal of this project is to identify how fraudulent activity impacts revenue and to understand when, how, and where suspicious transactions occur.
+This dashboard analyzes transactional data to identify fraud patterns, financial exposure, and behavioral anomalies. It highlights how fraud impacts revenue, when fraudulent behavior occurs, and which transaction types carry the greatest risk.
 
-# 💰 Key Business Impact Metrics
-Metric	Value	Insight
-Total Revenue	$507,587,819	Overall transaction volume processed
-Fraud Rate	0.8%	Small percentage, but high financial impact
-Fraud Cases	40	Confirmed fraudulent transactions detected
-Defrauded Amount	$34,634,097	Direct financial loss from fraud
+The goal of this project is to support fraud detection strategy, risk prioritization, and financial monitoring using data-driven insights.
 
-Even with a low fraud rate, the financial loss is significant, highlighting how a small number of high-value fraudulent transactions can drive major impact.
+# 📌 Executive Summary Metrics
 
-# 📈 Financial Bleed Over Time
+These KPIs give a high-level snapshot of fraud impact:
 
-The running total chart shows how financial exposure steadily increases over time, suggesting fraud is not isolated to a single spike but represents a continuous leakage. This signals the need for real-time monitoring systems rather than periodic reviews.
+Metric	Value	Meaning
+Total Revenue	$507,587,819	Total value of all processed transactions
+Fraud Rate	0.8%	Percentage of transactions flagged as fraud
+Fraud Cases	40	Number of confirmed fraudulent transactions
+Defrauded Amount	$34,634,097	Total financial loss due to fraud
 
-# 🔎 Correlation: Origin Account Balance vs Transaction Amount
+📉 Even though the fraud rate is small, the financial damage is disproportionately high, emphasizing the need for strong detection systems.
 
-This scatter plot explores whether accounts with higher balances are responsible for larger transactions.
+# 📈 Cumulative Loss Velocity
 
-Insights:
+What it shows:
+This dual-line chart tracks:
 
-Most transactions cluster at low-to-mid balances
+Individual fraudulent transaction amounts
 
-Fraudulent transactions (darker points) tend to appear as outliers
+The running total of financial loss over time
 
-A weak positive trend suggests that higher starting balances enable higher-risk transactions
+Insight:
+Losses do not occur evenly — a few high-value events drive large jumps in financial exposure. This highlights the importance of detecting large outlier transactions early.
 
-Large, abnormal transaction amounts stand out clearly from normal behavior
+# 🧮 Fraud Risk Matrix
 
-This chart helps fraud teams identify threshold-based anomaly detection opportunities.
+Breakdown of fraud by transaction type:
 
-# ⏰ Temporal Attack Window
+Type	Total Amount	Fraud Count	Risk Insight
+TRANSFER	Highest volume	High fraud count	Most attractive channel for fraud
+CASH_OUT	High	Moderate fraud count	Secondary risk area
+PAYMENT / DEBIT / CASH_IN	Lower	Minimal fraud	Lower priority for monitoring
 
-This visual highlights when fraudulent activity is most likely to occur.
+Insight:
+Fraud is heavily concentrated in TRANSFER and CASH_OUT transactions. These should receive stricter monitoring and fraud rules.
 
-Findings:
+# 📊 Correlation: Origin Balance vs Transaction Amount
 
-Fraud clusters in early morning hours
+This scatter plot compares account starting balances with transaction amounts.
 
-Both TRANSFER and CASH_OUT transactions show vulnerability during low-activity periods
+What we learn:
 
-Off-hour transaction monitoring should be prioritized
+Most normal transactions cluster at lower amounts
 
-Fraudsters often operate when oversight is reduced — this pattern supports implementing time-based risk scoring.
+Fraudulent transactions appear as large outliers
 
-# 🔄 Transfer vs Cash Out Comparison
+A slight positive relationship shows that higher balances enable higher transaction sizes
 
-Transfers account for a larger share of suspicious value compared to cash-out transactions.
+This visualization helps identify threshold-based risk detection opportunities.
 
-Type	Fraud Exposure Insight
-TRANSFER	Higher total value, more attractive for large-scale fraud
-CASH_OUT	Still risky, but lower aggregate exposure
+# 🕒 Financial Bleed Over Continuous Time
 
-This indicates transfer transactions should carry stricter fraud controls.
+This area chart shows the running sum of transaction value over time.
 
-# 🌪 Transaction Entropy Analysis
+Insight:
+Fraud-related financial exposure increases steadily, not suddenly — suggesting fraud is ongoing and cumulative, not just isolated spikes. Continuous monitoring is critical.
 
-The “Transaction Entropy” scatter visualizes transaction amounts against time.
+# 🧠 How These Visuals Work Together
+Visualization	Purpose
+KPIs	Show business impact of fraud
+Loss Velocity	Shows how fast losses accumulate
+Risk Matrix	Identifies risky transaction types
+Correlation Plot	Detects behavioral anomalies
+Financial Bleed	Shows long-term financial exposure
 
-Key Observations:
-
-Most activity follows predictable patterns
-
-Fraud cases appear as high-amount anomalies outside normal clusters
-
-A few extreme transactions significantly exceed normal behavior
-
-This supports the use of behavioral anomaly detection models.
+Together, they tell a story:
+Fraud is rare but financially severe, concentrated in certain transaction types, and often appears as large anomalies in otherwise normal activity.
 
 # 🛠️ Tech Stack
 
-This project combines data engineering, analysis, and visualization tools used in real-world analytics workflows:
+This project follows a real-world analytics workflow:
 
-Python → Data cleaning, preprocessing, and preparation
+# 🗄️ SQL
 
-SQL → Querying and extracting relevant transaction data
+Queried raw transaction databases
 
-Tableau → Data visualization, dashboard design, and storytelling
+Filtered fraud cases
 
-Together, these tools were used to transform raw financial transaction data into a clear, interactive fraud analysis dashboard that highlights risk patterns and business impact.
+Aggregated metrics by transaction type and time
 
-# 🧠 Skills Demonstrated
+# 🐍 Python
 
-Fraud analytics & risk assessment
+Data cleaning and preprocessing
 
-Data visualization storytelling
+Feature preparation for analysis
 
-Anomaly detection concepts
+Handling missing values and data normalization
 
-Financial impact analysis
+# 📊 Tableau
 
-Dashboard design for business decision-making
+Built interactive dashboards
+
+Designed visual storytelling elements
+
+Created calculated fields and KPIs
+
+Developed trend and anomaly visualizations
 
 # 🎯 Business Recommendations
 
 Based on the analysis:
 
-Implement real-time monitoring for high-value transfers
+Increase monitoring on TRANSFER transactions
 
-Apply stricter controls during early morning hours
+Implement real-time alerts for high-value transactions
 
-Use balance-based transaction thresholds for risk scoring
+Apply behavioral anomaly detection models
 
-Prioritize monitoring of TRANSFER-type transactions
+Strengthen fraud detection during low-activity hours
 
-Deploy anomaly detection models to catch outlier transaction behavior
+Use balance-based risk thresholds for additional fraud scoring
 
-This project demonstrates how data visualization and analytical thinking can transform raw financial data into actionable fraud prevention strategies.
+# 🚀 Project Outcome
+
+This dashboard transforms raw transaction data into actionable insights that help organizations:
+
+✔ Reduce financial loss
+✔ Detect fraud earlier
+✔ Focus monitoring on high-risk transaction types
+✔ Understand behavioral patterns behind fraudulent activity
